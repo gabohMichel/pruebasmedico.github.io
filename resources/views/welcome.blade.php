@@ -114,7 +114,7 @@
                         <h1 style="text-align: center">PRINCIPALES PROCEDIMIENTOS</h1>
                     </div>
                     <div class="col-12 col-lg-4 col-md-4 col-sm-12">
-                        <img src="../img/services1.png" alt="" style="width:100%;">
+                        <img src="../img/services1.png" alt="" style="width:100%;height: 100%;">
                     </div>
                     <div class="col-12 col-lg-4 col-md-4 col-sm-12">
                         <ul class="list-services">
@@ -214,10 +214,10 @@
             <div class="title-content">
                 <h1>RESERVA UNA CONSULTA</h1>
             </div>
-            <div style="heigth:80vh">
-                <div class="row">
+            <div class="col-12">
+                <div class="row" style="height:80vh">
                     <div class="col-12 col-lg-6 col-md-6 col-sm-12" style="background: #013995; color:#fff;">
-                        <div class="div-contact-info">
+                        <div class="div-contact-info align-middle">
                             <span><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;&nbsp;UBICACIONES</span>
                             <ul class="list-services">
                                 <li class="li-description">Manuel M. Dieguez 360, Alta Vista, 48380 Puerto Vallarta, Jal.</li>
@@ -225,14 +225,14 @@
                                 <li class="li-description">Río Yaki 255, Instituto Politécnico Nacional 1474, 48313 Puerto Vallarta, Jal.</li>
                             </ul>
                         </div>
-                        <div class="div-contact-info">
+                        <div class="div-contact-info align-middle">
                             <span><i class="fas fa-phone-alt"></i>&nbsp;&nbsp;&nbsp;TELEFONOS</span>
                             <ul class="list-services">
                                 <li class="li-description">322 266 7191</li>
                                 <li class="li-description">222 118 9153</li>
                             </ul>
                         </div>
-                        <div class="div-contact-info">
+                        <div class="div-contact-info align-middle">
                             <span><i class="fas fa-envelope"></i>&nbsp;&nbsp;&nbsp;CORREO</span>
                             <ul class="list-services">
                                 <li class="li-description">contacto reatraumatologo.com</li>
@@ -242,8 +242,8 @@
                     <div class="col-12 col-lg-6 col-md-6 col-sm-12" style="padding: 0;">
                         <iframe
                           width="100%"
-                          height="450"
                           style="border:0"
+                          id="map"
                           allowfullscreen
                           src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDM4AbS0fq0BezfG-ja5HmwjARw7vNR1-c
                             &q=Manuel+M.+Dieguez+360,+Alta+Vista,+48380+Puerto+Vallarta,+Jal./">
@@ -303,8 +303,9 @@
 
             <div class="footer-networks">
                 <a href="https://www.facebook.com/Dr.RicardoVazquezRea" target="__blank"><i class="fab fa-facebook-square"></i></a> 
-                <a href="https://www.instagram.com/dr.ricardovazquezrea/" target="__blank"><i class="fab fa-instagram-square"></i></a> 
-                <a href="https://www.tiktok.com/@dr.ricardovazquezrea" target="__blank"><i class="fab fa-tiktok"></i></a> 
+                <a href="https://www.instagram.com/dr.ricardovazquezrea/" target="__blank"><i class="instagram-icon fab fa-instagram-square"></i></a> 
+                <a href="https://www.tiktok.com/@dr.ricardovazquezrea" target="__blank"><i class="fab fa-tiktok" style="color: #000;"></i></a> 
+                <a href="https://www.tiktok.com/@dr.ricardovazquezrea" target="__blank"><i class="fab fa-youtube" style="color: #FF0000"></i></a>
             </div>
 
             <span style="display: block;padding-top: 100px;">Copyright © 2021 Dr. Ricardo Vázquez Rea Todos los Derechos Reservados.</span>
@@ -323,6 +324,20 @@
                 </div>
             </div>
         </div>
+        <div id="wpac-google-review"></div>
+<script type="text/javascript">
+wpac_init = window.wpac_init || [];
+wpac_init.push({widget: 'GoogleReview', id: 33925, place_id: 'ChIJW5pKypa-cUERvup6hSII6Jk', view_mode: 'list'});
+(function() {
+    if ('WIDGETPACK_LOADED' in window) return;
+    WIDGETPACK_LOADED = true;
+    var mc = document.createElement('script');
+    mc.type = 'text/javascript';
+    mc.async = true;
+    mc.src = 'https://cdn.widgetpack.com/widget.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+})();
+</script>
         <script src="{{ asset('js/axios.min.js')}}"></script>
         <script src="{{ asset('js/vue.js')}}"></script>
         <script src="{{ asset('js/jquery-3.5.1.slim.min.js')}}"></script>
@@ -357,6 +372,9 @@
             document.querySelector('#contact').scrollIntoView({ 
               behavior: 'smooth' 
             });
+
+            var body = document.body, html = document.documentElement;
+            document.getElementById('map').style.height = '100%';
         </script>
         <script>
             Object.keys(VeeValidateRules).forEach(rule => {
