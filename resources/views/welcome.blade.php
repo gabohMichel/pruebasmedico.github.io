@@ -11,7 +11,7 @@
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ asset('css/bootstrap-vue.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/site.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/site.css?v=1') }}">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
         <script src="{{ asset('js/popper.min.js')}}"></script>
     </head>
@@ -215,27 +215,54 @@
                 <h1>RESERVA UNA CONSULTA</h1>
             </div>
             <div class="col-12">
-                <div class="row" style="height:80vh">
+                <div class="row" style="">
                     <div class="col-12 col-lg-6 col-md-6 col-sm-12" style="background: #013995; color:#fff;">
                         <div class="div-contact-info align-middle">
                             <span><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;&nbsp;UBICACIONES</span>
                             <ul class="list-services">
-                                <li class="li-description">Manuel M. Dieguez 360, Alta Vista, 48380 Puerto Vallarta, Jal.</li>
-                                <li class="li-description">Instituto Politécnico Nacional 1474, Villa Universidad, 48290 Puerto Vallarta, Jal.</li>
-                                <li class="li-description">Río Yaki 255, Instituto Politécnico Nacional 1474, 48313 Puerto Vallarta, Jal.</li>
+                                <li class="li-description">
+                                    <a class="link-not-decorate btnUbicacion" 
+                                    data-location="Av,+Los+Tules+136,+Col.+Díaz+Ordaz,+Torre+Médica+VMC.+Consultorio+103,+48210+Puerto+Vallarta,+Jal.">Av, Los Tules 136, Col. Díaz Ordaz, Torre Médica VMC. Consultorio 103, 48210 Puerto Vallarta, Jal.</a>
+                                </li>
+                                <li class="li-description">
+                                    <a class="link-not-decorate btnUbicacion" 
+                                    data-location="Paseo+de+los+cocoteros+55,+Núcleo+médico+Joya,+consultorio+7,+Fracc+Náutico,+63732+Nuevo+Vallarta,+Nay.">Paseo de los cocoteros 55, Núcleo médico Joya, consultorio 7, Fracc Náutico, 63732 Nuevo Vallarta, Nay.</a>
+                                </li>
+                                <li class="li-description">
+                                    <a class="link-not-decorate btnUbicacion" 
+                                    data-location="Instituto+Politécnico+Nacional+1474,+Villas+Universidad,+48290+Puerto+Vallarta,+Jal.">Instituto Politécnico Nacional 1474, Villas Universidad, 48290 Puerto Vallarta, Jal.</a>
+                                </li>
+                                <li class="li-description">
+                                    <a class="link-not-decorate btnUbicacion" 
+                                    data-location="Dr.+Ricardo+Vázquez+Rea+-+Traumatólogo,+Ortopedista+y+Cirugía+Articular+-+Consultorio+Rio+Yaki">Rio yaki 225, Instituto Politécnico Nacional 1474, 48313 Puerto Vallarta, Jal.</a>
+                                </li>
                             </ul>
                         </div>
                         <div class="div-contact-info align-middle">
                             <span><i class="fas fa-phone-alt"></i>&nbsp;&nbsp;&nbsp;TELEFONOS</span>
                             <ul class="list-services">
-                                <li class="li-description">322 266 7191</li>
-                                <li class="li-description">222 118 9153</li>
+                                <a class="link-not-decorate" href="tel:322 225 9510">
+                                    <li class="li-description">322 225 9510</li>
+                                </a>
+                                <a class="link-not-decorate" href="tel:322 228 9857">
+                                    <li class="li-description">322 228 9857</li>
+                                </a>
+                            </ul>
+                        </div>
+                        <div class="div-contact-info align-middle">
+                            <span><i class="fas fa-phone-alt"></i>&nbsp;&nbsp;&nbsp;SÓLO EMERGENCIAS</span>
+                            <ul class="list-services">
+                                <a class="link-not-decorate" href="tel:322 266 7198">
+                                    <li class="li-description">322 266 7198</li>
+                                </a>
                             </ul>
                         </div>
                         <div class="div-contact-info align-middle">
                             <span><i class="fas fa-envelope"></i>&nbsp;&nbsp;&nbsp;CORREO</span>
                             <ul class="list-services">
-                                <li class="li-description">contacto reatraumatologo.com</li>
+                                <a class="link-not-decorate" href="mailto:contacto@drricardovazquezrea.com">
+                                    <li class="li-description">contacto@drricardovazquezrea.com</li>
+                                </a>
                             </ul>
                         </div>
                     </div>
@@ -245,11 +272,15 @@
                           style="border:0"
                           id="map"
                           allowfullscreen
-                          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDM4AbS0fq0BezfG-ja5HmwjARw7vNR1-c
-                            &q=Manuel+M.+Dieguez+360,+Alta+Vista,+48380+Puerto+Vallarta,+Jal./">
+                          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDM4AbS0fq0BezfG-ja5HmwjARw7vNR1-c&q=Av,+Los+Tules+136,+Col.+Díaz+Ordaz,+Torre+Médica+VMC.+Consultorio+103,+48210+Puerto+Vallarta,+Jal.">
                         </iframe>
                     </div>
                 </div>
+            </div>
+            <div class="col-12">
+                <center>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#modalComments" style="background-color: #013995;margin-top: 20px;">VER COMENTARIOS</button>
+                </center>
             </div>
         </div>
         <div class="content-form" id="form-vue">
@@ -305,11 +336,17 @@
                 <a href="https://www.facebook.com/Dr.RicardoVazquezRea" target="__blank"><i class="fab fa-facebook-square"></i></a> 
                 <a href="https://www.instagram.com/dr.ricardovazquezrea/" target="__blank"><i class="instagram-icon fab fa-instagram-square"></i></a> 
                 <a href="https://www.tiktok.com/@dr.ricardovazquezrea" target="__blank"><i class="fab fa-tiktok" style="color: #000;"></i></a> 
-                <a href="https://www.tiktok.com/@dr.ricardovazquezrea" target="__blank"><i class="fab fa-youtube" style="color: #FF0000"></i></a>
+                <a href="https://www.youtube.com/channel/UClG_eO80JtWb4IYIiy111_g/about" target="__blank"><i class="fab fa-youtube" style="color: #FF0000"></i></a>
             </div>
 
             <span style="display: block;padding-top: 100px;">Copyright © 2021 Dr. Ricardo Vázquez Rea Todos los Derechos Reservados.</span>
+            <a href="https://wa.me/+512221763191?text=Hola%estoy%interesado%en%tus%servicio%de" 
+                target="__blank"
+                class="link-whatsapp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
         </div>
+        
         <div class="modal" id="modalCV" tabindex="-1">
             <div class="modal-dialog modal-dialog-centered modal-xl">
                 <div class="modal-content" style="height:550px;">
@@ -324,20 +361,20 @@
                 </div>
             </div>
         </div>
-        <div id="wpac-google-review"></div>
-<script type="text/javascript">
-wpac_init = window.wpac_init || [];
-wpac_init.push({widget: 'GoogleReview', id: 33925, place_id: 'ChIJW5pKypa-cUERvup6hSII6Jk', view_mode: 'list'});
-(function() {
-    if ('WIDGETPACK_LOADED' in window) return;
-    WIDGETPACK_LOADED = true;
-    var mc = document.createElement('script');
-    mc.type = 'text/javascript';
-    mc.async = true;
-    mc.src = 'https://cdn.widgetpack.com/widget.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
-})();
-</script>
+        <div class="modal" id="modalComments" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content" role="document">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div id="wpac-google-review"></div>
+                  </div>
+                </div>
+            </div>
+        </div>
         <script src="{{ asset('js/axios.min.js')}}"></script>
         <script src="{{ asset('js/vue.js')}}"></script>
         <script src="{{ asset('js/jquery-3.5.1.slim.min.js')}}"></script>
@@ -347,6 +384,29 @@ wpac_init.push({widget: 'GoogleReview', id: 33925, place_id: 'ChIJW5pKypa-cUERvu
         <script src="{{ asset('js/rules.umd.js')}}"></script>
         <script src="{{ asset('js/vee-validate.min.js')}}"></script>
         <script src="https://kit.fontawesome.com/8f542f1300.js" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            wpac_init = window.wpac_init || [];
+            wpac_init.push({widget: 'GoogleReview', id: 33925, place_id: 'ChIJm-19aHNFIYQRsFUNwf3hlbE', view_mode: 'list'});
+            (function() {
+                if ('WIDGETPACK_LOADED' in window) return;
+                WIDGETPACK_LOADED = true;
+                var mc = document.createElement('script');
+                mc.type = 'text/javascript';
+                mc.async = true;
+                mc.src = "{{ asset('js/widget.js')}}";
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+                var base = "https://www.google.com/";
+                var endPoint = "maps/embed/v1/";
+                var queryString = "place?key=AIzaSyDM4AbS0fq0BezfG-ja5HmwjARw7vNR1-c&q=";
+
+                $(".btnUbicacion").click(function(){
+                   let location = $(this).data("location");
+                   let url = base + endPoint + queryString + location;
+                   console.log(location);
+                   $("#map").attr("src",url);
+                });
+            })();
+        </script>
         <script>
             // Scroll to specific values
             // scrollTo is the same
