@@ -191,12 +191,12 @@
                     </div>
                     <div class="col-12 col-lg-8 col-md-8 col-sm-12">
                         <ul class="list-services">
-                            <li class="li-title">Cuando la condición es severa, se requerirá de una intervención quirúrguica estoy capacitado y certificado para realizar cirugías como:</li>
+                            <li class="li-title">Cuando la condición es severa, se requerirá de una intervención quirúrgica estoy capacitado y certificado para realizar cirugías como:</li>
                             <li class="li-description">Prótesis de cadera.</li>
                             <li class="li-description">Prótesis de hombro.</li>
                             <li class="li-description">Prótesis de rodilla.</li>
                             <li class="li-description">Artroscopias.</li>
-                            <li class="li-description">Reparación de tejido blanco.</li>
+                            <li class="li-description">Reparación de tejido blando.</li>
                             <li class="li-description">Cirugía de revisión de articulación.</li>
                             <li class="li-description">Reparación de hueso fracturado.</li>
                             <li class="li-description">Fusión de huesos.</li>
@@ -284,40 +284,42 @@
             </div>
         </div>
         <div class="content-form" id="form-vue">
-            <div class="row">
-                <div class="col-12">
-                    <div class="content" style="padding: 100px 50px;">
-                        <h1 style="color:#013995;font-weight:bold;">¿TIENES ALGUNA DUDA?</h1>
-                        <h2 style="color:#013995;font-weight:bold;">ESCRIBEME.</h2>
-                        <validation-observer v-slot="{ invalid, handleSubmit }">
-                            <form @submit.prevent="handleSubmit(Contactar)" style="font-family: sans-serif;">
-                                <validation-provider rules="required|max:50" v-slot="{ dirty, valid, invalid, errors }">
-                                    <input type="text" name="Nombre" id="name" v-model="contacto.Nombre" class="form-control" placeholder="Nombre"/>
-                                    <div class="texto-error invalid-feedback d-inline-block" v-show="errors">@{{ errors[0] }}</div>
-                                </validation-provider>
-                                <validation-provider rules="required|email" v-slot="{ dirty, valid, invalid, errors }">
-                                    <input type="text" name="Email" id="email" v-model="contacto.Email" class="form-control" placeholder="Email"/>
-                                    <div class="texto-error invalid-feedback d-inline-block" v-show="errors">@{{ errors[0] }}</div>
-                                </validation-provider>
-                                <validation-provider rules="required|max:10" v-slot="{ dirty, valid, invalid, errors }">
-                                    <input type="text" name="Telefono" id="phone" v-model="contacto.Telefono" class="form-control" placeholder="Telefono"/>
-                                    <div class="texto-error invalid-feedback d-inline-block" v-show="errors">@{{ errors[0] }}</div>
-                                </validation-provider>
-                                <validation-provider rules="required|max:100" v-slot="{ dirty, valid, invalid, errors }">
-                                    <input type="text" name="Asunto" id="subject" v-model="contacto.Asunto" class="form-control" placeholder="Asunto"/>
-                                    <div class="texto-error invalid-feedback d-inline-block" v-show="errors">@{{ errors[0] }}</div>
-                                </validation-provider>
-                                <validation-provider rules="required|max:300" v-slot="{ dirty, valid, invalid, errors }">
-                                    <textarea name="Mensaje" id="message" cols="30" rows="5" v-model="contacto.Info" class="form-control" placeholder="Mensaje"></textarea>
-                                    <div class="texto-error invalid-feedback d-inline-block" v-show="errors">@{{ errors[0] }}</div>
-                                </validation-provider>
-                                <button type="submit" class="btn btn-success">Enviar Mensaje</button>
-                                {{ csrf_field() }}
-                            </form>
-                        </validation-observer>
+            <b-overlay :show="overlayForm" rounded="sm">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="content" style="padding: 100px 50px;">
+                            <h1 style="color:#013995;font-weight:bold;">¿TIENES ALGUNA DUDA?</h1>
+                            <h2 style="color:#013995;font-weight:bold;">ESCRIBEME.</h2>
+                            <validation-observer v-slot="{ invalid, handleSubmit }">
+                                <form @submit.prevent="handleSubmit(Contactar)" style="font-family: sans-serif;">
+                                    <validation-provider rules="required|max:50" v-slot="{ dirty, valid, invalid, errors }">
+                                        <input type="text" name="Nombre" id="name" v-model="contacto.Nombre" class="form-control" placeholder="Nombre"/>
+                                        <div class="texto-error invalid-feedback d-inline-block" v-show="errors">@{{ errors[0] }}</div>
+                                    </validation-provider>
+                                    <validation-provider rules="required|email" v-slot="{ dirty, valid, invalid, errors }">
+                                        <input type="text" name="Email" id="email" v-model="contacto.Email" class="form-control" placeholder="Email"/>
+                                        <div class="texto-error invalid-feedback d-inline-block" v-show="errors">@{{ errors[0] }}</div>
+                                    </validation-provider>
+                                    <validation-provider rules="required|max:10" v-slot="{ dirty, valid, invalid, errors }">
+                                        <input type="text" name="Telefono" id="phone" v-model="contacto.Telefono" class="form-control" placeholder="Telefono"/>
+                                        <div class="texto-error invalid-feedback d-inline-block" v-show="errors">@{{ errors[0] }}</div>
+                                    </validation-provider>
+                                    <validation-provider rules="required|max:100" v-slot="{ dirty, valid, invalid, errors }">
+                                        <input type="text" name="Asunto" id="subject" v-model="contacto.Asunto" class="form-control" placeholder="Asunto"/>
+                                        <div class="texto-error invalid-feedback d-inline-block" v-show="errors">@{{ errors[0] }}</div>
+                                    </validation-provider>
+                                    <validation-provider rules="required|max:300" v-slot="{ dirty, valid, invalid, errors }">
+                                        <textarea name="Mensaje" id="message" cols="30" rows="5" v-model="contacto.Info" class="form-control" placeholder="Mensaje"></textarea>
+                                        <div class="texto-error invalid-feedback d-inline-block" v-show="errors">@{{ errors[0] }}</div>
+                                    </validation-provider>
+                                    <button type="submit" class="btn btn-success">Enviar Mensaje</button>
+                                    {{ csrf_field() }}
+                                </form>
+                            </validation-observer>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </b-overlay>
         </div>
         <div class="footer" style="position:relative;text-align:center;">
             <div class="content-schedule">
@@ -340,7 +342,7 @@
             </div>
 
             <span style="display: block;padding-top: 100px;">Copyright © 2021 Dr. Ricardo Vázquez Rea Todos los Derechos Reservados.</span>
-            <a href="https://wa.me/+512221763191?text=Hola%estoy%interesado%en%tus%servicio%de" 
+            <a href="https://wa.me/+523222289857?text=Hola%estoy%interesado%en%tus%servicio%de" 
                 target="__blank"
                 class="link-whatsapp">
                 <i class="fab fa-whatsapp"></i>
@@ -453,22 +455,39 @@
                         Email: null,
                         Telefono: null,
                         Info: null
-                    }
+                    },
+                    overlayForm: false
                 },
                 methods: {
                     Contactar: function(){
+                        this.overlayForm = true;
                         let _token = $('input[name="_token"]').val();
                         let contacto = this.contacto
                         axios.post("{{ route('ContactoEmail') }}", { _token, contacto })
                         .then(respuesta => {
-                            let objRespuesta = respuesta.body.mensaje;
-                            console.log(objRespuesta);
-                            //this.enviarToastRespuesta(objRespuesta.TipoMensaje, objRespuesta.Mensaje)
+                            this.overlayForm = false;
+                            console.log(respuesta);
+                            let objRespuesta = respuesta.data.mensaje;
+                            this.enviarToastRespuesta(objRespuesta.TipoMensaje, objRespuesta.Mensaje)
                         })
                         .catch(error => {
-                            //this.enviarToastErrorAjax("Enviar Correo")
+                            this.overlayForm = false;
+                            this.enviarToastErrorAjax("Error al Enviar Correo")
                             console.log(error);
                         })
+                    },
+                    enviarToastRespuesta: function(tipo, mensaje) {
+                        this.$bvToast.toast(mensaje, {
+                          title: 'Mensaje',
+                          autoHideDelay: 3000,
+                          variant: tipo,
+                          solid: false,
+                          toaster: 'b-toaster-bottom-right',
+                          appendToast: true
+                        })
+                    },
+                    enviarToastErrorAjax: function (mensaje){
+                        this.enviarToastRespuesta('danger', mensaje);
                     }
                 }
             })

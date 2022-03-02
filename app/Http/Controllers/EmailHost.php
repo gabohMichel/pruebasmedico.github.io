@@ -12,7 +12,7 @@ class EmailHost extends Controller
     {
         $array_params = [];
         $array_params = $request->get('contacto');
-        Mail::to('gabohgn66@gmail.com')->send(new MessageSend($array_params));
+        Mail::to('contacto2@drricardovazquezrea.com')->send(new MessageSend($array_params));
         $mensaje["mensaje"]["TipoMensaje"] = "success";
         $mensaje["mensaje"]["Mensaje"] = "Se ha enviado correctamente el mensaje, espere ha que nos contactemos con usted";
         return json_encode($mensaje);
