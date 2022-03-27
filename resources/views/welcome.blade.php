@@ -11,12 +11,25 @@
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ asset('css/bootstrap-vue.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/site.css?v=1') }}">
+        <link rel="stylesheet" href="{{ asset('css/site.css?v=2') }}">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
         <script src="{{ asset('js/popper.min.js')}}"></script>
     </head>
     <body>
         <div class="content-index">
+        <header>
+	    	<div class="menu_bar">
+	    		<a href="#" class="bt-menu"><i class="fa fa-bars"></i></a>
+	    	</div>
+	    	<nav>
+	    		<ul>
+	    			<li><a href="#"><span class="fa fa-home"></span>INICIO</a></li>
+	    			<li><a href="#about_us"><span class="fa fa-ambulance"></span>TRAYECTORIA</a></li>
+	    			<li><a href="#services"><span class="fa fa-stethoscope"></span>PROCEDIMIENTOS</a></li>
+	    			<li><a href="#contact"><span class="fa fa-address-book"></span>CONTACTO</a></li>
+	    		</ul>
+	    	</nav>
+	    </header>
             <ul class="nav menu-navigate">
                 <li class="nav-item">
                     <a href="#">INICIO</a>
@@ -113,10 +126,10 @@
                     <div class="col-12" style="margin: 25px 0;color: #013995">
                         <h1 style="text-align: center">PRINCIPALES PROCEDIMIENTOS</h1>
                     </div>
-                    <div class="col-12 col-lg-4 col-md-4 col-sm-12">
+                    <div class="col-12 col-lg-4 col-md-12 col-sm-12">
                         <img src="../img/services1.png" alt="" style="width:100%;height: 100%;">
                     </div>
-                    <div class="col-12 col-lg-4 col-md-4 col-sm-12">
+                    <div class="col-12 col-lg-4 col-md-6 col-sm-12">
                         <ul class="list-services">
                             <li class="li-title">Problemas de rodillas:</li>
                             <li class="li-description">Artrosis.</li>
@@ -137,7 +150,7 @@
                             <li class="li-description">Artitris.</li>
                         </ul>
                     </div>
-                    <div class="col-12 col-lg-4 col-md-4 col-sm-12">
+                    <div class="col-12 col-lg-4 col-md-6 col-sm-12">
                         <ul class="list-services">
                             <li class="li-description">Bursitis.</li>
                             <li class="li-description">Síndrome de tunel cubital.</li>
@@ -161,7 +174,10 @@
             </div>
             <div class="div-services" style="border-left: #013995 45px solid; margin:0;">
                 <div class="row" style="height:100%">
-                    <div class="col-12 col-lg-8 col-md-8 col-sm-12" style="padding: 20px 0px;">
+                    <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+                        <img src="../img/services2.png" alt="" style="width:100%;">
+                    </div>
+                    <div class="col-12 col-lg-8 col-md-12 col-sm-12" style="padding: 20px 0px;">
                         <ul class="list-services" style="margin-left: 60px;">
                             <li class="li-title">Entre los síntomas que se presentan con más frecuencia se encuentran:</li>
                             <li class="li-description">Dolor de rodilla.</li>
@@ -186,7 +202,7 @@
             </div>
             <div class="div-services">
                 <div class="row">
-                    <div class="col-12 col-lg-4 col-md-4 col-sm-12">
+                    <div class="col-12 col-lg-4 col-md-12 col-sm-12">
                         <img src="../img/services3.png" alt="" style="width:100%;">
                     </div>
                     <div class="col-12 col-lg-8 col-md-8 col-sm-12">
@@ -215,14 +231,15 @@
                 <h1>RESERVA UNA CONSULTA</h1>
             </div>
             <div class="col-12">
-                <div class="row" style="">
-                    <div class="col-12 col-lg-6 col-md-6 col-sm-12" style="background: #013995; color:#fff;">
+                <div class="row">
+                    <div class="col-12 col-lg-6 col-md-12 col-sm-12 hide-contact" 
+                        style="background: #013995; color:#fff;">
                         <div class="div-contact-info align-middle">
                             <span><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;&nbsp;UBICACIONES</span>
                             <ul class="list-services">
                                 <li class="li-description">
                                     <a class="link-not-decorate btnUbicacion" 
-                                    data-location="Av,+Los+Tules+136,+Col.+Díaz+Ordaz,+Torre+Médica+VMC.+Consultorio+103,+48210+Puerto+Vallarta,+Jal.">Av, Los Tules 136, Col. Díaz Ordaz, Torre Médica VMC. Consultorio 103, 48210 Puerto Vallarta, Jal.</a>
+                                    data-location="Dr.+Ricardo+Vázquez+Rea+-+Traumatólogo,+Ortopedista+y+Cirugía+Articular+UNAM+Consultorio+VMC">Av, Los Tules 136, Col. Díaz Ordaz, Torre Médica VMC. Consultorio 103, 48210 Puerto Vallarta, Jal.</a>
                                 </li>
                                 <li class="li-description">
                                     <a class="link-not-decorate btnUbicacion" 
@@ -265,14 +282,17 @@
                                 </a>
                             </ul>
                         </div>
+                        <div id="swipeContact">
+                            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        </div>
                     </div>
-                    <div class="col-12 col-lg-6 col-md-6 col-sm-12" style="padding: 0;">
+                    <div class="col-12 col-lg-6 col-md-12 col-sm-12" style="padding: 0;">
                         <iframe
                           width="100%"
                           style="border:0"
                           id="map"
                           allowfullscreen
-                          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDM4AbS0fq0BezfG-ja5HmwjARw7vNR1-c&q=Av,+Los+Tules+136,+Col.+Díaz+Ordaz,+Torre+Médica+VMC.+Consultorio+103,+48210+Puerto+Vallarta,+Jal.">
+                          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDM4AbS0fq0BezfG-ja5HmwjARw7vNR1-c&q=Dr.+Ricardo+Vázquez+Rea+-+Traumatólogo,+Ortopedista+y+Cirugía+Articular+UNAM+Consultorio+VMC">
                         </iframe>
                     </div>
                 </div>
@@ -379,7 +399,7 @@
         </div>
         <script src="{{ asset('js/axios.min.js')}}"></script>
         <script src="{{ asset('js/vue.js')}}"></script>
-        <script src="{{ asset('js/jquery-3.5.1.slim.min.js')}}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="{{ asset('js/bootstrap.bundle.min.js')}}"></script>
         <script src="{{ asset('js/bootstrap-vue.min.js')}}"></script>
         <script src="{{ asset('js/bootstrap-vue-icons.min.js')}}"></script>
@@ -389,7 +409,23 @@
         <script type="text/javascript">
             wpac_init = window.wpac_init || [];
             wpac_init.push({widget: 'GoogleReview', id: 33925, place_id: 'ChIJm-19aHNFIYQRsFUNwf3hlbE', view_mode: 'list'});
+
+            const deviceType = () => {
+                const ua = navigator.userAgent;
+                if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+                    return "tablet";
+                }
+                else if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
+                    return "mobile";
+                }
+                return "desktop";
+            };
+
             (function() {
+                $(document).ready(main);
+
+                var contador = 1;
+
                 if ('WIDGETPACK_LOADED' in window) return;
                 WIDGETPACK_LOADED = true;
                 var mc = document.createElement('script');
@@ -402,11 +438,54 @@
                 var queryString = "place?key=AIzaSyDM4AbS0fq0BezfG-ja5HmwjARw7vNR1-c&q=";
 
                 $(".btnUbicacion").click(function(){
-                   let location = $(this).data("location");
-                   let url = base + endPoint + queryString + location;
-                   console.log(location);
-                   $("#map").attr("src",url);
+                    let location = $(this).data("location");
+                    let url = base + endPoint + queryString + location;
+                    
+                    $("#map").attr("src",url);
+
+                    let device = deviceType();
+
+                    if(device == 'tablet' || device == 'mobile')
+                        swipeContact();
                 });
+
+                $("#swipeContact").on("touchstart", function(){
+                    swipeContact();
+                });
+
+                var swipeContact = function() {
+                    $("#swipeContact").find("i").remove();
+                    if($(".hide-contact")[0]) {
+                        $(".hide-contact").addClass("show-contact");
+                        $(".show-contact").removeClass("hide-contact");
+                        $("#swipeContact").append("<i class='fa fa-chevron-left' aria-hidden='true'></i>");
+                    }
+                    else {
+                        $(".show-contact").addClass("hide-contact");
+                        $(".hide-contact").removeClass("show-contact");
+                        $("#swipeContact").append("<i class='fa fa-chevron-right' aria-hidden='true'></i>");
+                    }
+                }
+
+                function main(){
+                	$('.menu_bar').click(function(){
+                		// $('nav').toggle(); 
+                    
+                		if(contador == 1){
+                			$('nav').animate({
+                				left: '0'
+                			});
+                			contador = 0;
+                		} else {
+                			contador = 1;
+                			$('nav').animate({
+                				left: '-100%'
+                			});
+                		}
+                    
+                	});
+                
+                };
             })();
         </script>
         <script>
