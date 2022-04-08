@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Laravel</title>
+        <title>Dr. Ricardo Vazquez</title>
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -115,7 +115,7 @@
                 </div>
                 <div class="col-12 col-lg-6 col-md-6 col-sm-12">
                     <span>CERTIFICADO POR EL CONSEJO MEXICANO</span>
-                    <span>DE TRAUMATOLOGÍA Y ORTOPEDIA A.C.</span>
+                    <span>ORTOPEDIA Y TRAUMATOLOGÍA, A.C.</span>
                     <img src="../img/info2_2.png" alt="">
                 </div>
             </div>
@@ -147,7 +147,7 @@
                             <li class="li-description">Lesiones de meniscos.</li>
                             <li class="li-description">Rupturas de ligamentos cruzadas.</li>
                             <li class="li-description">Juanetes.</li>
-                            <li class="li-description">Artitris.</li>
+                            <li class="li-description">Artritis.</li>
                         </ul>
                     </div>
                     <div class="col-12 col-lg-4 col-md-6 col-sm-12">
