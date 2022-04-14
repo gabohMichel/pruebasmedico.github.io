@@ -376,12 +376,12 @@ div.content-info-2 span {
  }
 
 .footer-networks {
-    padding-top: 30px;
+    padding-top: 50px;
 }
 
  .footer-networks i {
-    font-size: 30px;
-    margin: 0 15px;
+    font-size: 60px;
+    margin: 0 50px;
  }
 
 .footer img {
@@ -771,4 +771,13 @@ span#derechos {
         left: 0%;
         font-size: 12px;
     }
+
+    .footer-networks {
+        padding-top: 50px;
+    }
+    
+     .footer-networks i {
+        font-size: 60px;
+        margin: 0 50px;
+     }
 }
