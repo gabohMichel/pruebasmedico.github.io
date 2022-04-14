@@ -376,12 +376,12 @@ div.content-info-2 span {
  }
 
 .footer-networks {
-    padding-top: 50px;
+    padding-top: 30px;
 }
 
  .footer-networks i {
-    font-size: 60px;
-    margin: 0 50px;
+    font-size: 30px;
+    margin: 0 15px;
  }
 
 .footer img {
@@ -395,6 +395,22 @@ div.content-info-2 span {
 
 .footer {
     color: #013995;
+}
+
+.footer span {
+    display: flex;
+    position: absolute;
+}
+
+span#aviso-privacidad {
+    bottom: 80px;
+    left: 45%;
+    cursor: pointer;
+}
+
+span#derechos {
+    bottom: 50px;
+    left: 30%
 }
 
 .content-about-us button {
@@ -440,6 +456,14 @@ div.content-info-2 span {
 
 #swipeContact {
     display: none;
+}
+
+.aviso-privacidad h1{
+    text-align: center;
+}
+
+.aviso-privacidad p{
+    text-align: justify;
 }
 
 @media screen and (max-width: 1000px) {
@@ -554,6 +578,17 @@ div.content-info-2 span {
 		float:right;
 		font-size:40px;
 	}
+
+    span#aviso-privacidad {
+        bottom: 80px;
+        left: 40%;
+    }
+    
+    span#derechos {
+        bottom: 50px;
+        left: 20%
+    }
+    
 }
 
 @media screen and (max-width: 720px) {
@@ -715,7 +750,7 @@ div.content-info-2 span {
     header nav ul {
         padding-inline-start: 0px!important;
     }
-    
+
     header span {
         margin-right: 3px;
     }
@@ -723,5 +758,17 @@ div.content-info-2 span {
     .menu_bar .bt-menu {
         padding: 12px;
         font-size: 15px;
+    }
+
+    span#aviso-privacidad {
+        bottom: 50px;
+        left: 30%;
+        font-size: 14px;
+    }
+
+    span#derechos {
+        bottom: 10px;
+        left: 0%;
+        font-size: 12px;
     }
 }

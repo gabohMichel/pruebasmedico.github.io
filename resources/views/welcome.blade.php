@@ -11,7 +11,7 @@
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ asset('css/bootstrap-vue.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/site.css?v=2') }}">
+        <link rel="stylesheet" href="{{ asset('css/site.css?v=3') }}">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
         <script src="{{ asset('js/popper.min.js')}}"></script>
     </head>
@@ -361,7 +361,11 @@
                 <a href="https://www.youtube.com/channel/UClG_eO80JtWb4IYIiy111_g/about" target="__blank"><i class="fab fa-youtube" style="color: #FF0000"></i></a>
             </div>
 
-            <span style="display: block;padding-top: 100px;">Copyright © 2021 Dr. Ricardo Vázquez Rea Todos los Derechos Reservados.</span>
+            <span id="aviso-privacidad">
+                <a data-toggle="modal" data-target="#modalAvisoPrivacidad">Aviso de privacidad</a>
+            </span>
+            <span id="derechos">Copyright © 2021 Dr. Ricardo Vázquez Rea Todos los Derechos Reservados.</span>
+            
             <a href="https://wa.me/+523222289857?text=Hola%estoy%interesado%en%tus%servicio%de" 
                 target="__blank"
                 class="link-whatsapp">
@@ -397,6 +401,115 @@
                 </div>
             </div>
         </div>
+        <div class="modal aviso-privacidad" id="modalAvisoPrivacidad" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content" role="document">
+                  <div class="modal-header">
+                    <h1>AVISO DE PRIVACIDAD.</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    
+                    <p>
+                        El presente aviso de privacidad, se expide de conformidad con el artículo 16 Ley Federal de
+                        Protección de Datos Personales en Posesión de los Particulares.
+                    </p>
+                    <p>
+                        I.- Las finalidades del tratamiento de datos.- Lo constituye la prestación de servicios de
+                        salud realizadas en beneficio del titular de la información, dirigidas a proteger, promover y
+                        restaurar su salud, garantizar un tratamiento correcto, determinar si requiere ser tratado
+                        como paciente vulnerable y de alto riesgo, hospitalización, cirugía, estudios diagnósticos y
+                        demás fines relacionados con servicios de salud. Creación, estudio, análisis, actualización,
+                        y conservación del expediente clínico. Facturación y cobranza por servicios médicos.
+                        Estudios, registros, estadísticas y análisis de información de salud. prestación de servicios
+                        de salud en el futuro y en general para dar seguimiento a cualquier relación de prestación
+                        de servicios. Investigación y Estadística Clínica. Remitir sus datos a sus médicos
+                        interconsultantes, transferir sus datos, en su caso, a la aseguradora con quien tenga
+                        contratada una póliza de seguro de gastos médicos, para encuestas de satisfacción de
+                        servicios para el cumplimiento de los derechos y obligaciones adquiridos por la firma del
+                        Contrato de la Prestación de Servicios Médicos.
+                    </p>
+                    <p>
+                        II.- Las opciones y medios que el responsable ofrezca a los titulares para limitar el uso o
+                        divulgación de los datos.- Para limitar el uso de sus datos personales, favor de enviar un
+                        correo electrónico a la dirección electrónica y/o por escrito a la dirección abajo anotada,
+                        dirigida al responsable de la información de Datos Personales en el que se señale la
+                        limitación al uso de sus datos deseada.
+                    </p>
+                    <p>
+                        III.- Los medios para ejercer los derechos de acceso, rectificación, cancelación u oposición
+                        de los derechos previstos en la Ley.- Para el ejercicio de sus derechos ARCO y/o
+                        modificación y/o la revocación de su consentimiento para el tratamiento de sus datos
+                        personales, en caso de que estos sean inexactos o incompletos u oponerse a su
+                        tratamiento para ciertos fines, favor de presentar una solicitud por escrito (solicitud de
+                        ejercicio de derechos ARCO) dirigida al responsable de Datos Personales a la dirección
+                        electrónica o física abajo anotada, y que deberá contener la siguiente información: a)
+                        Nombre del titular. b) Domicilio de titular o dirección de correo electrónico para comunicar
+                        respuesta a solicitud. c) Documentos que acrediten identidad o autorización para
+                        representarlo en la solicitud. d) Descripción de datos personales sobre los que se pretende
+                        ejercer algún derecho ARCO. e) Cualquier otro elemento que permita la localización de los
+                        datos personales y atención a la solicitud.
+                    </p>
+                    <p>
+                        IV.- En su caso, las transferencias de datos que se efectúen.- Para la prestación de
+                        servicios. El responsable puede transferir dentro y fuera del país, los datos personales en su
+                        posesión a terceros subcontratados para fines relacionados con los señalados en este aviso
+                        de privacidad. Dentro de los terceros a los que se transferirán dichos datos se incluyen sin
+                        limitar laboratorios, clínicas, hospitales, otros profesionales de la salud (psicólogos,
+                        nutriólogos, etc), centros de investigación, aseguradoras, así como a cualquiera otro
+                        necesario para la prestación del servicio médico y los correspondientes al cumplimiento de
+                        las obligaciones del contrato de prestación de servicios profesionales.
+                    </p>
+                    <p>
+                        V.- El procedimiento y medio por el cual el responsable comunicará a los titulares de
+                        cambios al aviso de privacidad, de conformidad con lo previsto en esta Ley.- El
+                        Responsable, se reserva el derecho de efectuar en cualquier momento modificaciones al
+                        presente Aviso de Privacidad para cumplir con actualizaciones legislativas,
+                        jurisprudenciales, políticas internas, nuevos requisitos para la presentación de servicios
+                        médicos, en el entendido de que toda modificación al mismo se le dará a conocer por medio
+                        de la publicación de un aviso que estará disponible en nuestras instalaciones abajo
+                        anotadas.
+                    </p>
+                    <p>
+                        VI.- En el caso de datos personales sensibles, el aviso de privacidad deberá señalar
+                        expresamente que se trata de este tipo de datos.- El Responsable recabará y tratará datos
+                        sensibles, relacionados con el estado de salud, historial clínico que describe, antecedentes
+                        patológicos, no patológicos y otros datos necesarios o convenientes para los fines arriba
+                        señalados. Los datos personales sensibles serán mantenidos y tratados con estricta
+                        seguridad y confidencialidad para fines relacionados con la prestación de servicios de salud
+                        y conforme a este aviso de privacidad y la legislación, reglamentos y normativa aplicable.
+                    </p>
+                    <p>
+                        La identidad y domicilio del responsable que los recaba.
+                    </p>
+                    <p>
+                        Responsable: Dr. José Ricardo Vazquez Rea
+                        Domicilio: Av. Los tules. Col. Díaz Ordaz. Oficina 103 Torre Médica VMC. Puerto Vallarta,
+                        Jalisco. Cp 48210
+                        Teléfono:322 350 2932.
+                        Dirección Electrónica: webricardovazquezrea@gmail.com
+                    </p>
+                    <p>
+                        "Derechos de autor propiedad de Salomon & Warner, S.C., registrados bajo No.
+                        03-2005-121914345800-01 con el Titulo: CARTAS DE CONSENTIMEINTO INFORMADO,
+                        en el rubro de TITULO DE OBRA, ante el INDAUTOR. El licenciamiento es para uso
+                        EXCLUSIVO del licenciatario aquí anotado, motivo por el cual NO PODRA, no deberá, ni
+                        permitir a terceras partes, asignar, licenciar a terceros, vender, rentar, alquilar, ni traspasar
+                        ni de ninguna otra forma utilizar, transferir, copiar, traducir, ceder, convertir a otro idioma,
+                        alterar, modificar, descompilar ni desensamblar las CARTAS DE CONSENTIMIENTO ni el
+                        SOFTWARE, completa ni parcialmente, a menos que se indique o garantice en éste
+                        contrato. Solo podrá adicionar riesgos personalizados y otras alternativas. No deberá
+                        eliminar, borrar, ni cancelar ningún aviso sobre derechos de autor que aparezca en las
+                        CARTAS DE CONSENTIMIENTO y/o en el SOFTWARE que las contiene en cualquier
+                        medio; quedando prohibido y sujeto a procedimiento PENAL y CIVIL de REPARACIÓN DEL
+                        DAÑO CAUSADO, cualquier tipo de reproducción sin autorización por escrito."
+                    </p>
+                  </div>
+                </div>
+            </div>
+        </div>
         <script src="{{ asset('js/axios.min.js')}}"></script>
         <script src="{{ asset('js/vue.js')}}"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -406,6 +519,7 @@
         <script src="{{ asset('js/rules.umd.js')}}"></script>
         <script src="{{ asset('js/vee-validate.min.js')}}"></script>
         <script src="https://kit.fontawesome.com/8f542f1300.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.emailjs.com/dist/email.min.js" type="text/javascript"></script>
         <script type="text/javascript">
             wpac_init = window.wpac_init || [];
             wpac_init.push({widget: 'GoogleReview', id: 33925, place_id: 'ChIJm-19aHNFIYQRsFUNwf3hlbE', view_mode: 'list'});
@@ -423,7 +537,7 @@
 
             (function() {
                 $(document).ready(main);
-
+                
                 var contador = 1;
 
                 if ('WIDGETPACK_LOADED' in window) return;
@@ -468,6 +582,8 @@
                 }
 
                 function main(){
+                    emailjs.init("WR6swttnQ1FpFeKgw");
+
                 	$('.menu_bar').click(function(){
                 		// $('nav').toggle(); 
                     
@@ -541,19 +657,20 @@
                     Contactar: function(){
                         this.overlayForm = true;
                         let _token = $('input[name="_token"]').val();
-                        let contacto = this.contacto
-                        axios.post("{{ route('ContactoEmail') }}", { _token, contacto })
-                        .then(respuesta => {
-                            this.overlayForm = false;
-                            console.log(respuesta);
-                            let objRespuesta = respuesta.data.mensaje;
-                            this.enviarToastRespuesta(objRespuesta.TipoMensaje, objRespuesta.Mensaje)
-                        })
-                        .catch(error => {
-                            this.overlayForm = false;
-                            this.enviarToastErrorAjax("Error al Enviar Correo")
-                            console.log(error);
-                        })
+                        let data = this.contacto;
+                        var vue = this;
+                        emailjs.send("service_34fpk3p","template_o504zpe", data)
+                        .then(function(response) {
+                            if(response.text === 'OK'){
+                                vue.overlayForm = false;
+                                console.log(response);
+                                vue.enviarToastRespuesta("success", "El correo se ha enviado de forma exitosa");
+                            }
+                           console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+                        }, function(err) {
+                            vue.enviarToastRespuesta("error", "Ocurrió un problema al enviar el correo");
+                           console.log("FAILED. error=", err);
+                        });
                     },
                     enviarToastRespuesta: function(tipo, mensaje) {
                         this.$bvToast.toast(mensaje, {
